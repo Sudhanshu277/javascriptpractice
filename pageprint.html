@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id = "div1"> div on content
+     <button onclick="myfun('div1')">divone</button>
+	</div>
+	<div id = "div2"> div on content
+     <button onclick="myfun('div2')">div2</button>
+	</div>
+	<div id = "div3"> div on content
+     <button onclick="myfun('div3')">div3</button>
+	</div>
+
+	<button onclick="my()"> whole page</button>
+	<script type="text/javascript">
+		function my(){
+           window.print();
+		}
+
+		function myfun(paravalue){
+			var backup = document.body.innerHTML;
+			var divcontent = document.getElementById(paravalue).innerHTML;
+
+			document.body.innerHTML = divcontent;
+			window.print();
+			document.body.innerHTML = backup;
+
+		}
+
+	</script>
+
+
+</body>
+</html>
