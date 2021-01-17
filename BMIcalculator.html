@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header text-center">BMI calculator</div>
+			<div class="card-body">
+				<form class="m-auto w-50">
+					<div class="form-group">
+						<label>Weight</label>
+						<input type="number" name="" id="weight" class="form-control" placeholder="Weight in kg">
+					</div>
+					<div class="form-group">
+						<label>height</label>
+						<input type="number" name="" id="height" class="form-control" placeholder="Height in ft">
+					</div>
+					<div class="form-group">
+						<label>BMI</label>
+						<input type="number" name="" id="new" class="form-control">
+					</div>
+					<div>
+						<button type="submit" class="btn btn-success" onclick="getbmi()">check your bmi</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer text-center">A healthy range between 19 and 25</div>
+		</div>
+	</div>
+    <script>
+    	
+
+    	function getbmi(){
+    		var weight = document.getElementById('weight').value;
+    	    var height = document.getElementById('height').value;
+            
+            height = height * 12;
+            height = height * 0.025; //now height in meter 
+
+            var newbmi = weight / (height * height);
+            var round = Math.round(newbmi); 
+
+            document.getElementById('new').value = round;
+
+    	}
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

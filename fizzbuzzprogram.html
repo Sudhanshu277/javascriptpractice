@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var fizzbuzz = [];
+		var i = 1;
+
+		function fizbuz() {
+			
+		
+		while(i<=100){
+			if ((i%3) == 0 && (i%5) == 0){
+			fizzbuzz.push("FizzBuzz");
+			// document.write("fizzbuzz")
+			document.write("<br>")
+		}else if((i%5) == 0)
+		{
+		    fizzbuzz.push("Buzz");
+         // document.write("buzz")
+         document.write("<br>")
+		}else if ((i%3) == 0) {
+			fizzbuzz.push("Fizz");
+		 // document.write("fizz")
+         document.write("<br>")	
+		}
+		else{
+			fizzbuzz.push(i);
+			//document.write(i);
+			document.write("<br>")
+		}
+			i++;
+		}
+		console.log(fizzbuzz)
+    }
+    fizbuz();
+	</script>
+
+</body>
+</html>
